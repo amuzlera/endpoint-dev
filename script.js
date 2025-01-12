@@ -2,7 +2,8 @@ function sendRequest() {
     const inputText = document.getElementById('inputText').value;
     const responseArea = document.getElementById('responseArea');
 
-    fetch('https://d8af-2800-810-437-93f-4177-e1c8-87a3-634e.ngrok-free.app/predict', {
+    const url = document.getElementById('urlInput').value;
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
